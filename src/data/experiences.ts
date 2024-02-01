@@ -9,12 +9,21 @@ export type Experience = {
 
 export const experiences: Experience[] = [
   {
+    company: "Bankdata",
+    titles: ["Senior Software Developer"],
+    description:
+      "Developing a microfrontend architecture designed to facilitate the decoupling of other frontend teams. This involves the creation of a CLI, an SDK, and a comprehensive documentation to support and guide the development teams in their use.",
+    from: new Date("02/01/2024"),
+    to: null,
+    link: "https://bankdata.dk",
+  },
+  {
     company: "Better Developers",
     titles: ["CTO & Partner"],
     description:
       "Responsible for the technological evolution of the business. Contributed to talent acquisition efforts, designing coding interviews, and screening candidates for technical skills. Led a team of frontend developers to ensure adherence to good architecture and best practices.",
     from: new Date("03/01/2023"),
-    to: null,
+    to: new Date("01/01/2024"),
     link: "https://betterdevelopers.dk",
   },
   {
