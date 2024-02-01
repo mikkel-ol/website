@@ -16,7 +16,7 @@ export const About: React.FC = () => {
         design, and thorough utilization of frameworks and libraries.
       </p>
 
-      <p>When I'm not at the computer you can usually find me watching dough rise, watching formula 1 or losing in a game of padel.</p>
+      <p>When I'm not at the computer you can usually find me watching sourdough rise, watching formula 1 or losing in a game of padel.</p>
     </div>
   );
 };
