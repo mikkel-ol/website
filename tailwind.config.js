@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      cursor: {
+        racket: "url(img/racket.png), auto;",
+      },
+    },
   },
   plugins: [],
 };

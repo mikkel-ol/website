@@ -6,17 +6,20 @@ export const About: React.FC = () => {
       <MobileHeader>About</MobileHeader>
 
       <p>
-        Back in 2009 I sat in my friend's basement trying relentlessly to jailbreak our iPhones so we could customize and make them our own.
-        Fast forward to today and I've dived deep into software engineering, having been fortunate enough to work with many great companies
-        and brilliant people.
+        Back in 2009, I sat in my friend's basement, trying relentlessly to jailbreak our iPhones so we could customize them and make them
+        our own. Fast forward to today, and I have dived deep into software engineering, having been fortunate enough to work with many
+        great companies and brilliant people.
       </p>
 
       <p>
-        My main focus when developing software is ensuring a high level of code quality through solid architecture, thoughtful software
+        My main focus when developing software is to ensure a high level of code quality through solid architecture, thoughtful software
         design, and thorough utilization of frameworks and libraries.
       </p>
 
-      <p>When I'm not at the computer you can usually find me watching sourdough rise, watching formula 1 or losing in a game of padel.</p>
+      <p>
+        When I'm not at the computer, you can usually find me staring at sourdough rise, watching Formula 1, or losing in a game of{" "}
+        <span className="hover:cursor-racket">padel</span>.
+      </p>
     </div>
   );
 };
