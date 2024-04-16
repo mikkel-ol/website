@@ -17,7 +17,7 @@ export const Searchlight: React.FC = () => {
 
   useEffect(() => {
     const cb = (event: MouseEvent) => {
-      const { screenX: x, clientY: y } = event;
+      const { clientX: x, clientY: y } = event;
 
       setPosition({ x, y });
     };
