@@ -24,9 +24,9 @@ const App: React.FC = () => {
 
               <h2 className="text-xl text-slate-200 font-medium mt-3">Senior Software Engineer</h2>
 
-              <p className="italic mt-6 mb-4 lg:mb-16 w-[75%]">
-                DRY, SOLID, KISS — a combination of acronyms that sounds wrong to most people, but makes perfect sense to a software
-                developer with a passion for clean code and robust architecture.
+              <p className="mt-6 mb-4 lg:mb-16 w-[75%]">
+                <span className="italic">DRY, SOLID, KISS</span> — a combination of acronyms that sounds wrong to most people, but makes
+                perfect sense to a software developer with a passion for clean code and robust architecture.
               </p>
 
               <nav className="hidden lg:block">
