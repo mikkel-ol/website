@@ -2,7 +2,7 @@ import { useCallback, useEffect, useState } from "react";
 
 const KONAMI_CODE = ["ArrowUp", "ArrowUp", "ArrowDown", "ArrowDown", "ArrowLeft", "ArrowRight", "ArrowLeft", "ArrowRight", "b", "a"];
 
-function useKonami(action: () => void, { code = KONAMI_CODE } = {}) {
+export const useKonami = (action: () => void, { code = KONAMI_CODE } = {}) => {
   const [input, setInput] = useState<string[]>([]);
 
   const onKeyDown = useCallback(
@@ -23,6 +23,4 @@ function useKonami(action: () => void, { code = KONAMI_CODE } = {}) {
 
     return () => document.removeEventListener("keydown", onKeyDown);
   }, [onKeyDown]);
-}
-
-export default useKonami;
+};

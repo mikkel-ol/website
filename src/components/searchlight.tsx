@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from "react";
-import useKonami from "../hooks/use-konami";
+import { useKonami } from "../hooks/use-konami";
 
 type Position = {
   x: number;
