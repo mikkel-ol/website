@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       cursor: {
-        racket: "url(img/racket.png), auto;",
+        racket: "url(/img/racket.png), auto;",
       },
     },
   },
