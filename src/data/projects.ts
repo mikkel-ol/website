@@ -20,7 +20,7 @@ export const projects: Project[] = [
     link: "https://marketplace.visualstudio.com/items?itemName=mikkel-ol.er-syntax-highlighting",
     tech: ["Node.js", "Regex", "Theming", "Extension"],
     img: erdImg,
-    installs: 3143,
+    installs: 4123,
   },
   {
     name: "inscrive.io",
