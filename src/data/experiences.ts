@@ -39,7 +39,7 @@ export const experiences: Experience[] = [
     company: "ML Consulting",
     titles: ["Freelance"],
     from: new Date("03/01/2013"),
-    to: null,
+    to: new Date("03/01/2024"),
     description:
       "Side business engaging in everything tech-related. Tackled a wide variety of challenges at small and medium sized businesses, such as developing small applications, installation of survelliance systems, setup and management of server infrastructure, smart phone repairs, and on-prem support.",
     link: "http://ikkel.dk",
