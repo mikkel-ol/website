@@ -7,8 +7,8 @@ export const About: React.FC = () => {
 
       <p>
         Back in 2009, I sat in my friend's basement, trying relentlessly to jailbreak our iPhones so we could customize them and make them
-        our own. Fast forward to today, and I have dived deep into software engineering, having been fortunate enough to work with many
-        great companies and brilliant people.
+        our own. Fast forward to today, and I have dived deep into software engineering, having been fortunate enough to work on many great
+        projects with brilliant people.
       </p>
 
       <p>
