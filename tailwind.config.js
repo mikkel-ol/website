@@ -4,7 +4,9 @@ export default {
   theme: {
     extend: {
       cursor: {
-        racket: "url(/img/racket.png), auto;",
+        racket: "url(/img/racket.webp), auto;",
+        boxing: "url(/img/boxing.webp), auto;",
+        formula1: "url(/img/formula1.webp), auto;",
       },
     },
   },
