@@ -18,7 +18,8 @@ export const About: React.FC = () => {
 
       <p>
         When I'm not at the computer, you can usually find me <span className="hover:cursor-boxing">boxing</span>, watching{" "}
-        <span className="hover:cursor-formula1">Formula 1</span>, or losing in a game of <span className="hover:cursor-racket">padel</span>.
+        <span className="hover:cursor-formula1">Formula 1</span>, or losing in a game of{" "}
+        <span className="hover:cursor-racket">padel tennis</span>.
       </p>
     </div>
   );
