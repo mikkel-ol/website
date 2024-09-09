@@ -1,3 +1,3 @@
-# ikkel.dk
+# 🤖 [mikkel.software](https://mikkel.software)
 
 > To be written
