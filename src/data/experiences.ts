@@ -12,7 +12,7 @@ export const experiences: Experience[] = [
     company: "Bankdata",
     titles: ["Senior Software Developer"],
     description:
-      "Developing a microfrontend architecture designed to facilitate the decoupling of other frontend teams. This involves building a CLI, an SDK, and extensive documentation to support and guide development teams in effectively utilizing the architecture.",
+      "Developing a micro frontend architecture designed to enable the decoupling of 30+ frontend teams. This involves building a CLI, an SDK, and extensive documentation to support and guide development teams in effectively utilizing the platform.",
     from: new Date("02/01/2024"),
     to: null,
     link: "https://bankdata.dk",
