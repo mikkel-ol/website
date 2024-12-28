@@ -14,13 +14,19 @@ export const useGyro = () => {
 
   const [requiresPermission, setRequiresPermission] = useState(false);
   const [permission, setPermission] = useState<"granted" | "denied" | null>(null);
-  const askPermssion = () => {
-    if (DeviceOrientationEvent.requestPermission) {
-      DeviceOrientationEvent.requestPermission().then(setPermission);
-    }
-  };
+  const [error, setError] = useState<Error | null>(null);
+  const askPermission = () =>
+    DeviceOrientationEvent.requestPermission?.()
+      .then((x) => {
+        setPermission(x);
 
-  // Check if permission is required (iOS 13+)
+        if (x === "granted") {
+          setEnabled(true);
+        }
+      })
+      .catch((e) => setError(e));
+
+  // Check if permission is required
   useEffect(() => {
     if (typeof DeviceOrientationEvent.requestPermission === "function") {
       setRequiresPermission(true);
@@ -29,7 +35,7 @@ export const useGyro = () => {
 
   // Check if the device supports the gyroscope API
   const testOrientation = (event: DeviceOrientationEvent) => {
-    if (event.alpha !== null || event.beta !== null || event.gamma !== null) {
+    if (!requiresPermission && (event.alpha !== null || event.beta !== null || event.gamma !== null)) {
       setEnabled(true);
     } else {
       setEnabled(false);
@@ -39,7 +45,8 @@ export const useGyro = () => {
   useEffect(() => {
     window.addEventListener("deviceorientation", testOrientation);
     return () => window.removeEventListener("deviceorientation", testOrientation);
-  }, []);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [requiresPermission]);
 
   // Get values from the gyroscope
   const handleOrientation = (event: DeviceOrientationEvent) => {
@@ -53,5 +60,5 @@ export const useGyro = () => {
     return () => window.removeEventListener("deviceorientation", handleOrientation);
   }, []);
 
-  return { enabled, alpha, beta, gamma, requiresPermission, permission, askPermssion };
+  return { enabled, alpha, beta, gamma, requiresPermission, permission, askPermission, error };
 };

@@ -8,6 +8,8 @@ import { Footer } from "./components/footer";
 import { Menu } from "./components/menu";
 import { Projects } from "./components/projects";
 import { Searchlight } from "./components/searchlight";
+import { FunMode } from "./components/fun-mode";
+import { FunModeHeader } from "./components/fun-mode-header";
 
 type Sequence = ComponentProps<typeof TypeAnimation>["sequence"];
 
@@ -26,7 +28,7 @@ const App: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
           <section className="col-start-1 lg:sticky top-0 max-h-screen lg:py-24 flex flex-col justify-between">
             <header>
-              <h1 className="text-4xl md:text-5xl text-slate-200 font-bold">Mikkel O. Laursen</h1>
+              <FunModeHeader text="Mikkel O. Laursen" />
 
               <TypeAnimation
                 preRenderFirstString
@@ -48,6 +50,8 @@ const App: React.FC = () => {
             <footer className="mt-8">
               <Contacts />
             </footer>
+
+            <FunMode />
           </section>
 
           <main className="lg:col-start-2 flex flex-col gap-24 py-24">
