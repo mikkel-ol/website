@@ -8,7 +8,6 @@ import { Footer } from "./components/footer";
 import { Menu } from "./components/menu";
 import { Projects } from "./components/projects";
 import { Searchlight } from "./components/searchlight";
-import { FunMode } from "./components/fun-mode";
 import { FunModeHeader } from "./components/fun-mode-header";
 
 type Sequence = ComponentProps<typeof TypeAnimation>["sequence"];
@@ -50,8 +49,6 @@ const App: React.FC = () => {
             <footer className="mt-8">
               <Contacts />
             </footer>
-
-            <FunMode />
           </section>
 
           <main className="lg:col-start-2 flex flex-col gap-24 py-24">

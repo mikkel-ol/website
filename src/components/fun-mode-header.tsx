@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useGyro } from "../hooks/use-gyro";
+import { useFunModeContext } from "../contexts/use-fun-mode-context";
 
 export type FunModeHeaderProps = {
   text: string;
@@ -8,11 +9,12 @@ export type FunModeHeaderProps = {
 export const FunModeHeader: React.FC<FunModeHeaderProps> = ({ text }) => {
   const [clicks, setClicks] = useState(0);
   const { enabled, askPermission } = useGyro();
+  const { setEnabled: setFunMode } = useFunModeContext();
 
   const handleClick = () => setClicks((x) => x + 1);
 
   if (!enabled && clicks >= 3) {
-    askPermission();
+    askPermission()?.then(() => setFunMode(true));
   }
 
   return (

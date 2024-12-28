@@ -1,3 +1,4 @@
+import { useFunModeContext } from "../contexts/use-fun-mode-context";
 import { useCursor } from "./use-cursor";
 import { useGyro } from "./use-gyro";
 
@@ -6,7 +7,8 @@ import { useGyro } from "./use-gyro";
  */
 export const usePointer = () => {
   const { x: cursorX, y: cursorY } = useCursor();
-  const { enabled: gyroEnabled, beta, gamma } = useGyro();
+  const { beta, gamma } = useGyro();
+  const { enabled: funModeEnabled } = useFunModeContext();
 
   const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
   const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
@@ -15,7 +17,7 @@ export const usePointer = () => {
     return (n * (x - min)) / (max - min);
   };
 
-  if (gyroEnabled) {
+  if (funModeEnabled) {
     const x = mapToRange({
       x: gamma,
       min: 40,
