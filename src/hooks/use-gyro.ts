@@ -30,7 +30,6 @@ export const useGyro = () => {
   // Check if the device supports the gyroscope API
   const testOrientation = (event: DeviceOrientationEvent) => {
     if (event.alpha !== null || event.beta !== null || event.gamma !== null) {
-      console.log(event);
       setEnabled(true);
     } else {
       setEnabled(false);
