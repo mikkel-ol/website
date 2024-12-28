@@ -45,7 +45,7 @@ const App: React.FC = () => {
               </nav>
             </header>
 
-            <footer>
+            <footer className="mt-8">
               <Contacts />
             </footer>
           </section>
