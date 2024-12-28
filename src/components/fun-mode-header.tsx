@@ -14,7 +14,7 @@ export const FunModeHeader: React.FC<FunModeHeaderProps> = ({ text }) => {
   const handleClick = () => setClicks((x) => x + 1);
 
   if (!enabled && clicks >= 3) {
-    askPermission()?.then(() => setFunMode(true));
+    askPermission()?.then((x) => setFunMode(!!x));
   }
 
   return (

@@ -23,6 +23,8 @@ export const useGyro = () => {
         if (x === "granted") {
           setEnabled(true);
         }
+
+        return x === "granted";
       })
       .catch((e) => setError(e));
 
