@@ -1,30 +1,14 @@
-import { useEffect, useRef, useState } from "react";
+import { useRef, useState } from "react";
 import { useKonami } from "../hooks/use-konami";
-
-type Position = {
-  x: number;
-  y: number;
-};
+import { usePointer } from "../hooks/use-pointer";
 
 export const Searchlight: React.FC = () => {
   const box = useRef<HTMLDivElement>(null);
   const [opacity, setOpacity] = useState(1);
-  const [{ x, y }, setPosition] = useState<Position>({ x: 0, y: 0 });
+  const { x, y } = usePointer();
 
   useKonami(() => {
     setOpacity(0);
-  });
-
-  useEffect(() => {
-    const cb = (event: MouseEvent) => {
-      const { clientX: x, clientY: y } = event;
-
-      setPosition({ x, y });
-    };
-
-    document.addEventListener("mousemove", cb);
-
-    return () => document.removeEventListener("mousemove", cb);
   });
 
   return (
