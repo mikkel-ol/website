@@ -2,13 +2,15 @@ import { useRef, useState } from "react";
 import { useKonami } from "../hooks/use-konami";
 import { usePointer } from "../hooks/use-pointer";
 import { isMobile } from "react-device-detect";
+import { useFunModeContext } from "../contexts/use-fun-mode-context";
 
 export const Searchlight: React.FC = () => {
   const box = useRef<HTMLDivElement>(null);
   const [opacity, setOpacity] = useState(1);
   const { x, y } = usePointer();
+  const { enabled: funModeEnabled } = useFunModeContext();
 
-  const gradient = isMobile ? 300 : 600;
+  const gradient = funModeEnabled ? 100 : isMobile ? 300 : 600;
 
   useKonami(() => {
     setOpacity(0);
