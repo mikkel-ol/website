@@ -10,7 +10,11 @@ export const Searchlight: React.FC = () => {
   const { x, y } = usePointer();
   const { enabled: funModeEnabled } = useFunModeContext();
 
-  const gradient = funModeEnabled ? 100 : isMobile ? 300 : 600;
+  const background = funModeEnabled
+    ? `radial-gradient(100px at ${x}px ${y}px, rgba(29, 78, 216, 0.25), transparent 80%)`
+    : isMobile
+    ? `radial-gradient(300px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
+    : `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
 
   useKonami(() => {
     setOpacity(0);
@@ -21,7 +25,7 @@ export const Searchlight: React.FC = () => {
       ref={box}
       className="fixed inset-0 z-50 pointer-events-none transition-all duration-1000"
       style={{
-        background: `radial-gradient(${gradient}px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`,
+        background: background,
         opacity: opacity,
       }}
     ></div>
