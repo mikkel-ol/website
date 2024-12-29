@@ -12,9 +12,18 @@ export const useGyro = () => {
   const [beta, setBeta] = useState(0);
   const [gamma, setGamma] = useState(0);
 
-  const [requiresPermission, setRequiresPermission] = useState(false);
-  const [permission, setPermission] = useState<"granted" | "denied" | null>(null);
   const [error, setError] = useState<Error | null>(null);
+  const [permission, setPermission] = useState<"granted" | "denied" | null>(null);
+  const [requiresPermission, setRequiresPermission] = useState(false);
+
+  const enable = () => {
+    if (requiresPermission) {
+      askPermission()?.then((x) => setEnabled(!!x));
+    } else {
+      setEnabled(true);
+    }
+  };
+
   const askPermission = () =>
     DeviceOrientationEvent.requestPermission?.()
       .then((x) => {
@@ -35,21 +44,6 @@ export const useGyro = () => {
     }
   }, []);
 
-  // Check if the device supports the gyroscope API
-  const testOrientation = (event: DeviceOrientationEvent) => {
-    if (!requiresPermission && (event.alpha !== null || event.beta !== null || event.gamma !== null)) {
-      setEnabled(true);
-    } else {
-      setEnabled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener("deviceorientation", testOrientation);
-    return () => window.removeEventListener("deviceorientation", testOrientation);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [requiresPermission]);
-
   // Get values from the gyroscope
   const handleOrientation = (event: DeviceOrientationEvent) => {
     setAlpha(event.alpha ?? 0);
@@ -62,5 +56,5 @@ export const useGyro = () => {
     return () => window.removeEventListener("deviceorientation", handleOrientation);
   }, []);
 
-  return { enabled, alpha, beta, gamma, requiresPermission, permission, askPermission, error };
+  return { enable, enabled, alpha, beta, gamma, requiresPermission, permission, error };
 };

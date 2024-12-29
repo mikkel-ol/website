@@ -20,15 +20,15 @@ export const usePointer = () => {
   if (funModeEnabled) {
     const x = mapToRange({
       x: gamma,
-      min: 40,
-      max: -40,
+      min: 30,
+      max: -30,
       n: vw,
     });
 
     const y = mapToRange({
       x: beta,
-      min: 50,
-      max: 140,
+      min: 30,
+      max: -30,
       n: vh,
     });
 
