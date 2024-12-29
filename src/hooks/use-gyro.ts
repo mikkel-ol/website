@@ -11,12 +11,15 @@ export const useGyro = () => {
   const [alpha, setAlpha] = useState(0);
   const [beta, setBeta] = useState(0);
   const [gamma, setGamma] = useState(0);
+  const [gyroPresent, setGyroPresent] = useState(false);
 
   const [error, setError] = useState<Error | null>(null);
   const [permission, setPermission] = useState<"granted" | "denied" | null>(null);
   const [requiresPermission, setRequiresPermission] = useState(false);
 
   const enable = () => {
+    if (!gyroPresent) return;
+
     if (requiresPermission) {
       askPermission()?.then((x) => setEnabled(!!x));
     } else {
@@ -36,6 +39,14 @@ export const useGyro = () => {
         return x === "granted";
       })
       .catch((e) => setError(e));
+
+  // Check if gyro is present
+  const checkGyro = (e: DeviceOrientationEvent) => setGyroPresent(!!e.alpha || !!e.beta || !!e.gamma);
+
+  useEffect(() => {
+    window.addEventListener("deviceorientation", checkGyro);
+    return () => window.removeEventListener("deviceorientation", checkGyro);
+  }, []);
 
   // Check if permission is required
   useEffect(() => {
