@@ -11,7 +11,7 @@ export const Searchlight: React.FC = () => {
   const { enabled: funModeEnabled } = useFunModeContext();
 
   const background = funModeEnabled
-    ? `radial-gradient(100px at ${x}px ${y}px, rgba(29, 78, 216, 0.25), transparent 80%)`
+    ? `radial-gradient(200px at ${x}px ${y}px, rgba(29, 78, 216, 0.25), transparent 80%)`
     : isMobile
     ? `radial-gradient(300px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`
     : `radial-gradient(600px at ${x}px ${y}px, rgba(29, 78, 216, 0.15), transparent 80%)`;
