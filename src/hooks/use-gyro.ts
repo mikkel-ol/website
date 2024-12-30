@@ -18,10 +18,10 @@ export const useGyro = () => {
   const [requiresPermission, setRequiresPermission] = useState(false);
 
   const enable = () => {
-    if (!gyroPresent) return;
-
     if (requiresPermission) {
       askPermission()?.then((x) => setEnabled(!!x));
+    } else if (!gyroPresent) {
+      setEnabled(false);
     } else {
       setEnabled(true);
     }
