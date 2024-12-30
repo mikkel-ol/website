@@ -41,7 +41,7 @@ export const useGyro = () => {
       .catch((e) => setError(e));
 
   // Check if gyro is present
-  const checkGyro = (e: DeviceOrientationEvent) => setGyroPresent(!!e.alpha || !!e.beta || !!e.gamma);
+  const checkGyro = (e: DeviceOrientationEvent) => setGyroPresent(e.alpha !== null || e.beta !== null || e.gamma !== null);
 
   useEffect(() => {
     window.addEventListener("deviceorientation", checkGyro);
