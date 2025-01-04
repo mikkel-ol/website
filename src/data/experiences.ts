@@ -27,7 +27,7 @@ export const experiences: Experience[] = [
     from: new Date("03/01/2023"),
     to: new Date("01/01/2024"),
     link: "https://betterdevelopers.dk",
-    tech: ["Consultancy", "Leadership", "Angular", "TypeScript", "React", "Next.js", ".NET"],
+    tech: ["Consultancy", "Leadership", "Angular", "TypeScript", "React", "Next.js", ".NET", "Tailwind CSS"],
   },
   {
     company: "IT Minds",
