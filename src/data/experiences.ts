@@ -5,6 +5,7 @@ export type Experience = {
   from: Date;
   to: Date | null;
   link: string;
+  tech: string[];
 };
 
 export const experiences: Experience[] = [
@@ -12,10 +13,11 @@ export const experiences: Experience[] = [
     company: "Bankdata",
     titles: ["Senior Software Developer"],
     description:
-      "Developing a micro frontend architecture designed to enable the decoupling of 30+ frontend teams. This involves building a CLI, an SDK, and extensive documentation to support and guide development teams in effectively utilizing the platform.",
+      "Developing a micro-frontend architecture designed to enable the decoupling of 30+ frontend teams. This involves building a CLI, an SDK, and extensive documentation to support and guide development teams in effectively utilizing the platform.",
     from: new Date("02/01/2024"),
     to: null,
     link: "https://bankdata.dk",
+    tech: ["Angular", "Micro-frontend", "SDK", "TypeScript"],
   },
   {
     company: "Better Developers",
@@ -25,6 +27,7 @@ export const experiences: Experience[] = [
     from: new Date("03/01/2023"),
     to: new Date("01/01/2024"),
     link: "https://betterdevelopers.dk",
+    tech: ["Consultancy", "Leadership", "Angular", "TypeScript", "React", "Next.js", ".NET"],
   },
   {
     company: "IT Minds",
@@ -34,6 +37,7 @@ export const experiences: Experience[] = [
     description:
       "Developed and delivered high quality, robust production code for a diverse array of projects for various clients. Offered tutoring to junior developers through mentorship, peer reviews, sparring, and knowledge sharing. Worked as a sourced consultant in many different teams, collaborating with UX designers, product owners, and other engineers to deliver digital experiences at an agile cadence.",
     link: "https://it-minds.dk",
+    tech: ["Consultancy", "Sparring buddy", "Angular", "React", "TypeScript", ".NET"],
   },
   {
     company: "ML Consulting",
@@ -43,5 +47,6 @@ export const experiences: Experience[] = [
     description:
       "Side business engaging in everything tech-related. Tackled a wide variety of challenges at small and medium sized businesses, such as developing small applications, installation of survelliance systems, setup and management of server infrastructure, smart phone repairs, and on-prem support.",
     link: "http://ikkel.dk",
+    tech: ["Consultancy", "Support", "Device repair", "Sales", "Development", "Windows Server", "Cloud Hosting"],
   },
 ];

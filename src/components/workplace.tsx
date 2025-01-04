@@ -1,8 +1,9 @@
 import { Experience } from "../data/experiences";
 import { dateFormat } from "../utils/date-format";
+import { Badge } from "./badge";
 import { Card } from "./card";
 
-export const Workplace: React.FC<Experience> = ({ company, titles, description, from, to, link }) => {
+export const Workplace: React.FC<Experience> = ({ company, titles, description, from, to, link, tech }) => {
   return (
     <Card>
       <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 sm:col-span-2">
@@ -35,6 +36,14 @@ export const Workplace: React.FC<Experience> = ({ company, titles, description, 
         </h3>
 
         <p className="mt-2 text-sm leading-normal">{description}</p>
+
+        <ul className="mt-3 flex flex-wrap gap-2">
+          {tech.map((tech, i) => (
+            <li key={i}>
+              <Badge text={tech} />
+            </li>
+          ))}
+        </ul>
       </div>
     </Card>
   );
