@@ -7,7 +7,7 @@ export const useGyro = () => {
   const [beta, setBeta] = useState(0);
   const [gamma, setGamma] = useState(0);
 
-  const enable = () => Gyro.enable().then((enabled) => setEnabled(enabled));
+  const enable = () => Gyro.enable().then(setEnabled);
 
   const handleOrientation = (event: DeviceOrientationEvent) => {
     setAlpha(event.alpha ?? 0);

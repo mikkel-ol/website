@@ -9,6 +9,7 @@ export const useKonami = (action: () => void, { code = KONAMI_CODE } = {}) => {
     (e: KeyboardEvent) => {
       setInput((x) => [...x, e.key].slice(-code.length));
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     [input, setInput, code, action]
   );
 
@@ -16,6 +17,7 @@ export const useKonami = (action: () => void, { code = KONAMI_CODE } = {}) => {
     if (input.join("") === code.join("")) {
       action();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [input]);
 
   useEffect(() => {
