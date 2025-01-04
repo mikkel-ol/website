@@ -1,5 +1,5 @@
 import { experiences } from "../data/experiences";
-import { Link } from "./link";
+import { AnimatedLink } from "./links/animated-link";
 import { MobileHeader } from "./mobile-header";
 import { Workplace } from "./workplace";
 
@@ -18,9 +18,9 @@ export const Experience: React.FC = () => {
         ))}
       </ol>
 
-      <Link href="/resume.pdf" external>
+      <AnimatedLink href="/resume.pdf" external>
         View full résumé
-      </Link>
+      </AnimatedLink>
     </div>
   );
 };

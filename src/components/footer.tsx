@@ -1,13 +1,5 @@
-import { PropsWithChildren } from "react";
 import { FaHeart } from "react-icons/fa";
-
-const Link: React.FC<PropsWithChildren<{ href: string }>> = ({ href, children }) => {
-  return (
-    <a href={href} className="font-bold transition-all hover:text-teal-300" target="_blank">
-      {children}
-    </a>
-  );
-};
+import { Link } from "./links/link";
 
 export const Footer: React.FC = () => {
   return (

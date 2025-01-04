@@ -1,3 +1,4 @@
+import { Link } from "./links/link";
 import { MobileHeader } from "./mobile-header";
 
 export const About: React.FC = () => {
@@ -6,20 +7,28 @@ export const About: React.FC = () => {
       <MobileHeader>About</MobileHeader>
 
       <p>
-        Back in 2009, I sat in my friend's basement, trying relentlessly to jailbreak our iPhones so we could customize them and make them
-        our own. Fast forward to today, and I have dived deep into software engineering, having been fortunate enough to work on many great
-        projects with brilliant people.
+        Back in 2009, I was in my friend's basement, obsessively trying to jailbreak our iPhones to push the boundaries of what was
+        possible. That curiosity and determination have since evolved into a career in software engineering, driven by a fascination with
+        technology's ability to shape and improve experiences.
       </p>
 
       <p>
-        My main focus when developing software is to ensure a high level of code quality through solid architecture, thoughtful software
-        design, and thorough utilization of frameworks and libraries.
+        I specialize in creating maintainable and scalable solutions through clean architecture, thoughtful software design, and intuitive
+        interfaces. My goal is to write code that not only solves problems but also stands the test of time.
       </p>
 
       <p>
-        When I'm not at the computer, you can usually find me <span className="hover:cursor-boxing">boxing</span>, watching{" "}
-        <span className="hover:cursor-formula1">Formula 1</span>, or losing in a game of{" "}
-        <span className="hover:cursor-racket">padel tennis</span>.
+        Currently, I'm a developer at{" "}
+        <Link href="https://bankdata.dk" style="bright">
+          Bankdata
+        </Link>
+        , specializing in micro-frontends. I contribute to the development of Mozaic, a platform that empowers 30+ teams to independently
+        deliver their slice of the online banking experience.
+      </p>
+
+      <p>
+        When I step away from the keyboard, you'll likely find me boxing, sim racing, spending time with my girlfriend, or watching
+        sourdough rise.
       </p>
     </div>
   );

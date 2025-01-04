@@ -1,12 +1,12 @@
 import { PropsWithChildren } from "react";
 import { TbExternalLink } from "react-icons/tb";
 
-export type LinkProps = {
+export type AnimatedLinkProps = {
   href: string;
   external?: boolean;
 };
 
-export const Link: React.FC<PropsWithChildren<LinkProps>> = ({ children, href, external = false }) => {
+export const AnimatedLink: React.FC<PropsWithChildren<AnimatedLinkProps>> = ({ children, href, external = false }) => {
   return (
     <h3 className="w-fit group mt-8 text-lg text-slate-200 font-bold hover:text-teal-300 focus-visible:text-teal-300 transition-all">
       <a className="inline-flex flex-col" href={href} target={external ? "_blank" : "_self"}>
