@@ -1,8 +1,9 @@
 import imgPlaceholder from "../assets/img-placeholder.png";
 import { projects_highlight } from "../data/projects";
+import { Badge } from "./badge";
 import { Card } from "./card";
 import { Installs } from "./installs";
-import { Link } from "./link";
+import { AnimatedLink } from "./links/animated-link";
 import { MobileHeader } from "./mobile-header";
 
 export const Projects: React.FC = () => {
@@ -45,9 +46,7 @@ export const Projects: React.FC = () => {
                   <ul className="flex flex-wrap gap-2">
                     {tech.map((tech, i) => (
                       <li key={i}>
-                        <div className="flex items-center rounded-full bg-teal-400/10 px-3 py-1 text-xs font-medium leading-5 text-teal-300">
-                          {tech}
-                        </div>
+                        <Badge text={tech} />
                       </li>
                     ))}
                   </ul>
@@ -58,7 +57,7 @@ export const Projects: React.FC = () => {
         ))}
       </ol>
 
-      <Link href="/projects">View all projects</Link>
+      <AnimatedLink href="/projects">View all projects</AnimatedLink>
     </div>
   );
 };
