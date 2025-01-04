@@ -1,5 +1,6 @@
 import { Link } from "./links/link";
 import { MobileHeader } from "./mobile-header";
+import { Mozaic } from "./mozaic";
 
 export const About: React.FC = () => {
   return (
@@ -22,8 +23,8 @@ export const About: React.FC = () => {
         <Link href="https://bankdata.dk" style="bright">
           Bankdata
         </Link>
-        , specializing in micro-frontends. I contribute to the development of Mozaic, a platform that empowers 30+ teams to independently
-        deliver their slice of the online banking experience.
+        , specializing in micro-frontends. I contribute to the development of <Mozaic />, a platform that empowers 30+ teams to
+        independently deliver their slice of the online banking experience.
       </p>
 
       <p>
