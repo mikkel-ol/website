@@ -5,10 +5,10 @@ import { About } from "./components/about";
 import { Contacts } from "./components/contacts";
 import { Experience } from "./components/experience";
 import { Footer } from "./components/footer";
+import { FunModeHeader } from "./components/fun-mode-header";
 import { Menu } from "./components/menu";
 import { Projects } from "./components/projects";
 import { Searchlight } from "./components/searchlight";
-import { FunModeHeader } from "./components/fun-mode-header";
 
 type Sequence = ComponentProps<typeof TypeAnimation>["sequence"];
 
@@ -17,7 +17,7 @@ const App: React.FC = () => {
   const experienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
 
-  const roles: Sequence = ["Software Developer", 3000, "Micro Frontend Engineer", 2000, "Consultant", 2000, "Nerd"];
+  const roles: Sequence = ["Software Developer", 3000, "Micro-frontend Engineer", 2000, "Consultant", 2000, "Nerd"];
 
   return (
     <>
