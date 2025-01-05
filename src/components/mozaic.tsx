@@ -4,7 +4,7 @@ export const Mozaic: React.FC = () => {
       <span className="sr-only">Mozaic</span>
 
       {/* <img
-        src="img/mozaic.png"
+        src="img/mozaic.webp"
         className="opacity-0 group-hover/mozaic:opacity-100 absolute top-0 group-hover/mozaic:-top-2 left-1/4 group-hover/mozaic:left-2 transform -translate-x-1/2 -translate-y-1/2 group-hover/mozaic:-rotate-12 h-5 transition-all"
       ></img> */}
 

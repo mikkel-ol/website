@@ -1,6 +1,6 @@
-import beepbotImg from "../assets/projects/beepbot.png";
-import erdImg from "../assets/projects/erd-syntax.png";
-import inscriveImg from "../assets/projects/inscrive.png";
+import beepbotImg from "../assets/projects/beepbot.webp";
+import erdImg from "../assets/projects/erd-syntax.webp";
+import inscriveImg from "../assets/projects/inscrive.webp";
 
 export type Project = {
   name: string;

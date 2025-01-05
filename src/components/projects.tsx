@@ -1,4 +1,4 @@
-import imgPlaceholder from "../assets/img-placeholder.png";
+import imgPlaceholder from "../assets/img-placeholder.webp";
 import { projects_highlight } from "../data/projects";
 import { Badge } from "./badge";
 import { Card } from "./card";

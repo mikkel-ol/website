@@ -7,7 +7,7 @@ export default {
         racket: "url(/img/racket.webp), auto;",
         boxing: "url(/img/boxing.webp), auto;",
         formula1: "url(/img/formula1.webp), auto;",
-        mozaic: "url(/img/mozaic.png), auto;",
+        mozaic: "url(/img/mozaic.webp), auto;",
       },
     },
   },
