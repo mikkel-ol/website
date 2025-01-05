@@ -1,4 +1,5 @@
 import { PropsWithChildren } from "react";
+import { Link as RouterLink } from "react-router-dom";
 
 export type LinkProps = {
   href: string;
@@ -9,8 +10,8 @@ export const Link: React.FC<PropsWithChildren<LinkProps>> = ({ href, style = "fa
   const color = style === "bright" ? "text-slate-200" : "text-slate-400";
 
   return (
-    <a href={href} className={`font-medium transition-all ${color} hover:text-teal-300`} target="_blank">
+    <RouterLink to={href} className={`font-medium transition-all ${color} hover:text-teal-300`} target="_blank">
       {children}
-    </a>
+    </RouterLink>
   );
 };
