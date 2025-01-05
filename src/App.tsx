@@ -37,7 +37,7 @@ const App: React.FC = () => {
                 repeat={0}
               />
 
-              <p className="mt-6 mb-4 lg:mb-16 w-[75%]">
+              <p className="mt-6 mb-4 lg:mb-16 max-w-sm">
                 <span className="italic">DRY, SOLID, KISS</span> — a combination of acronyms that sounds wrong to most people, but makes
                 perfect sense to a software developer with a passion for clean code and robust architecture.
               </p>
