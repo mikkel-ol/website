@@ -8,7 +8,10 @@ export type Project = {
   tech: string[];
   owner?: string;
   link?: string;
-  img?: string;
+  img?: {
+    src: string;
+    alt: string;
+  };
   installs?: number;
 };
 
@@ -19,7 +22,10 @@ export const projects: Project[] = [
       "Extension for VS Code providing syntax highlighting for Entity-Relationship Diagrams, enhancing readability and structure understanding in .er files.",
     link: "https://marketplace.visualstudio.com/items?itemName=mikkel-ol.er-syntax-highlighting",
     tech: ["Node.js", "Regex", "Theming", "Extension"],
-    img: erdImg,
+    img: {
+      src: erdImg,
+      alt: "ERD Syntax Highlighting",
+    },
     installs: 4123,
   },
   {
@@ -27,13 +33,19 @@ export const projects: Project[] = [
     description: "Cloud-based LaTeX editor that allows real-time collaboration and editing with client side compilation of documents.",
     link: "https://inscrive.io",
     tech: ["Next.js", "WebAssembly", "ASP.NET", "SignalR", "LaTeX"],
-    img: inscriveImg,
+    img: {
+      src: inscriveImg,
+      alt: "Inscrive.io",
+    },
   },
   {
     name: "BeepBot",
     description: "All-purpose Discord bot that features web-based soundboard, welcome greetings, playing music, and much more.",
     tech: ["Node.js", "Discord.js", "TypeScript", "Express", "ASP.NET", "SQL Server"],
-    img: beepbotImg,
+    img: {
+      src: beepbotImg,
+      alt: "Beep Bot",
+    },
   },
   {
     name: "InterCount",

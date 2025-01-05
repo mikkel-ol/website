@@ -18,7 +18,8 @@ export const Projects: React.FC = () => {
               <Card>
                 <img
                   className="order-3 sm:order-1 rounded border-2 border-slate-200/10 transition group-hover:border-slate-200/30 sm:col-span-2 sm:translate-y-1"
-                  src={img ?? imgPlaceholder}
+                  src={img?.src ?? imgPlaceholder}
+                  alt={img?.alt ?? "Image placeholder"}
                   width={200}
                   height={48}
                 ></img>
