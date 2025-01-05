@@ -1,12 +1,13 @@
-export type IconLinkProps = {
+import { AnchorHTMLAttributes } from "react";
+
+export type IconLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
   icon: React.ReactElement;
-  href: string;
 };
 
-export const IconLink: React.FC<IconLinkProps> = ({ icon, href }) => {
+export const IconLink: React.FC<IconLinkProps> = (props) => {
   return (
-    <a className="transition-colors hover:text-white" href={href} target="_blank">
-      {icon}
+    <a {...props} className="transition-colors hover:text-white" href={props.href} target="_blank">
+      {props.icon}
     </a>
   );
 };
