@@ -1,3 +1,4 @@
+import Clarity from "@microsoft/clarity";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import { RouterProvider, createBrowserRouter } from "react-router-dom";
@@ -7,6 +8,8 @@ import "./index.scss";
 import { Layout } from "./layout/Layout.tsx";
 import { Home } from "./routes/Home.tsx";
 import { Projects } from "./routes/Projects.tsx";
+
+Clarity.init("pq71okd55j");
 
 const router = createBrowserRouter([
   {
