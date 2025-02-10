@@ -21,7 +21,7 @@ export const experiences: Experience[] = [
   },
   {
     company: "Better Developers",
-    titles: ["CTO & Partner"],
+    titles: ["CTO & Co-owner"],
     description:
       "Responsible for the technological evolution of the business. Contributed to talent acquisition efforts, designing coding interviews, and screening candidates for technical skills. Led a team of frontend developers to ensure adherence to good architecture and best practices.",
     from: new Date("03/01/2023"),
