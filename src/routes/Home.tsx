@@ -17,7 +17,7 @@ export const Home: React.FC = () => {
   const experienceRef = useRef<HTMLElement>(null);
   const projectsRef = useRef<HTMLElement>(null);
 
-  const roles: Sequence = ["Software Developer", 3000, "Micro-frontend Engineer", 2000, "Consultant", 2000, "Nerd"];
+  const roles: Sequence = ["Software Developer", 3000, "Micro-frontend Engineer", 2000, "Angular lover", 2000, "Nerd"];
 
   return (
     <>
