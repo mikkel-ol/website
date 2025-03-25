@@ -17,9 +17,19 @@ export type Project = {
 
 export const projects: Project[] = [
   {
+    name: "Mozaic",
+    description: "A micro-frontend platform that allows for easy integration of multiple applications into a single coherent experience.",
+    tech: ["Angular", "Webpack", "SDK"],
+  },
+  {
+    name: "BDApps",
+    description: "Internal Bankdata application for accessing micro-frontends builds across platforms, devices and branches.",
+    tech: ["Angular", "Kirby Design System", "Azure Pipelines"],
+  },
+  {
     name: "ERD Syntax Highlighting",
     description:
-      "Extension for VS Code providing syntax highlighting for Entity-Relationship Diagrams, enhancing readability and structure understanding in .er files.",
+      "Extension for VS Code providing syntax highlighting for Entity-Relationship Diagrams, enhancing readability and structure understanding of .er files.",
     link: "https://marketplace.visualstudio.com/items?itemName=mikkel-ol.er-syntax-highlighting",
     tech: ["Node.js", "Regex", "Theming", "Extension"],
     img: {
