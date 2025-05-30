@@ -1,6 +1,7 @@
 import beepbotImg from "../assets/projects/beepbot.webp";
 import erdImg from "../assets/projects/erd-syntax-sm.webp";
 import inscriveImg from "../assets/projects/inscrive-sm.webp";
+import skatrouletteImg from "../assets/projects/skatroulette.webp";
 
 export type Project = {
   name: string;
@@ -36,6 +37,16 @@ export const projects: Project[] = [
     img: {
       src: inscriveImg,
       alt: "Inscrive.io",
+    },
+  },
+  {
+    name: "Skatroulette",
+    description: "Not satisfied with your tax return? Refresh the page until you are!",
+    tech: ["HTML", "CSS", "JavaScript"],
+    link: "https://skatroulette.dk",
+    img: {
+      src: skatrouletteImg,
+      alt: "Skatroulette",
     },
   },
   {
@@ -141,5 +152,5 @@ export const projects: Project[] = [
 ];
 
 export const projects_highlight = projects.filter(
-  ({ name }) => name === "inscrive.io" || name === "ERD Syntax Highlighting" || name === "BeepBot"
+  ({ name }) => name === "inscrive.io" || name === "ERD Syntax Highlighting" || name === "Skatroulette"
 );
