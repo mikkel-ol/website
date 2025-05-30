@@ -8,13 +8,13 @@ export const About: React.FC = () => {
       <MobileHeader>About</MobileHeader>
 
       <p>
-        Back in 2009, I was in my friend's basement, obsessively trying to jailbreak our iPhones to push the boundaries of what was
+        Back in 2009, I was in my friend's basement obsessively trying to jailbreak our iPhones, drawn to the boundaries of what was
         possible. That curiosity and determination have since evolved into a career in software engineering, driven by a fascination with
-        technology's ability to shape and improve experiences.
+        technology's ability to shape and improve life.
       </p>
 
       <p>
-        I specialize in creating maintainable and scalable solutions through clean architecture, thoughtful software design, and intuitive
+        I thrive in creating maintainable and scalable solutions through clean architecture, thoughtful software design, and intuitive
         interfaces. My goal is to write code that not only solves problems but also stands the test of time.
       </p>
 
@@ -23,13 +23,13 @@ export const About: React.FC = () => {
         <Link href="https://bankdata.dk" style="bright">
           Bankdata
         </Link>
-        , specializing in micro-frontends. I contribute to the development of <Mozaic />, a platform that empowers 30+ teams to
+        , specializing in micro-frontends. I contribute to the development of <Mozaic />, a platform that empowers 40+ teams to
         independently deliver their slice of the online banking experience.
       </p>
 
       <p>
-        When I step away from the keyboard, you'll likely find me boxing, sim racing, spending time with my girlfriend, or watching
-        sourdough rise.
+        When I step away from the keyboard, you'll likely find me at the race track, in the boxing ring, spending time with my son and
+        girlfriend, or watching sourdough rise.
       </p>
     </div>
   );
